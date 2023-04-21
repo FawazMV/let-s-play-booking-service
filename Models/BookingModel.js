@@ -12,7 +12,7 @@ const bookingSchema = new mongoose.Schema(
             ref: "turfs",
             required: true
         },
-        bookDate:
+        bookDate: 
         {
             type: Date,
             required: true
