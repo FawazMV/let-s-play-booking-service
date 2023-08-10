@@ -12,7 +12,7 @@ const app = express()
 app.use(express.json());
 const corsOptions = {
     origin: ['https://let-s-play-user-service.onrender.com', 'https://let-s-play-turf-service.onrender.com'],
-    methods: 'GET,POST,PATCH,PUT,DELETE',
+    methods: 'GET,POST,put,PUT,DELETE',
     preflightContinue: true,
     optionsSuccessStatus: 200,
     credentials: true

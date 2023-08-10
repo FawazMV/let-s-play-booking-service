@@ -11,9 +11,9 @@ router.get('/payment', paymentIntent)
 router.post('/book-slot', bookSlot)
 
 
-router.patch('/booking-success', bookingSuccess)
+router.put('/booking-success', bookingSuccess)
 
-router.patch('/booking-failed', bookingFailed)
+router.put('/booking-failed', bookingFailed)
 
 
 
@@ -50,7 +50,7 @@ router.get('/all-reports', allReports)
 
 router.get('/payment-requests', getPaymentRequests)
 
-router.patch('/payment-confirm', confirmPaymentRequest)
+router.put('/payment-confirm', confirmPaymentRequest)
 
 router.get('/dashboard-graph-details', dashboardGraphDetails)
 
