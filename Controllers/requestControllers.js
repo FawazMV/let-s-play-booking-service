@@ -22,7 +22,7 @@ export const userBookings = async (req, res, next) => {
             { $match: { user: new mongoose.Types.ObjectId(req.query.user) } },
             { $lookup: { from: 'turfs', localField: 'turf', foreignField: '_id', as: 'turf' } },
             { $unwind: '$turf' },
-            { $project: { 'turf.courtName': 1, bookDate: 1, time: 1, payment: 1, createdAt :1} },
+            { $project: { 'turf.courtName': 1, bookDate: 1, time: 1, payment: 1, createdAt: 1 } },
             { $sort: { bookDate: -1 } }
         ])
         return res.status(200).json(data)

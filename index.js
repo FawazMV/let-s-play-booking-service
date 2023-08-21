@@ -4,7 +4,6 @@ import Router from './Routes.js'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import connectDB from './Models/config.js'
-import sendMail from './Helpers/nodemailer.js'
 
 
 dotenv.config()
