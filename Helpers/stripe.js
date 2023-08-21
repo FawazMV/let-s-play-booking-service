@@ -19,7 +19,7 @@ export const paymentStripe = async ({ Price, courtName }, email, id) => {
 };
 
 export const paymentIntentSetup = async ({ Price }, email) => {
-    return paymentIntent = await stripe.paymentIntents.create({
+    return await stripe.paymentIntents.create({
         amount: Price * 100,
         currency: 'INR',
         receipt_email: email,
