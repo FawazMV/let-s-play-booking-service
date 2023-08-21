@@ -53,7 +53,7 @@ export const bookingSuccess = async (req, res, next) => {
 export const bookingFailed = async (req, res, next) => {
     try {
         await bookingModel.updateOne({ _id: req.body.id, payment: 'Pending' }, { $set: { payment: 'Failed' } })
-        return res.status(200).json()
+        return res.status(200).json({message:'successfully updated'})
     } catch (error) {
         return res.status(500).json({ error: 'internal server error', err: error })
     }
